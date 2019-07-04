@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style type="text/css">
+
+h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:slateBlue;
+  text-align: center; 
+  text-decoration: underline
+}
+h4{
+  font-family: Calibri; 
+  font-size: 18pt;         
+  font-style: Italic; 
+  font-weight: bold; 
+  color:Navy;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  text-align:; 
+  background-color: SlateBlue; 
+  border-collapse: collapse; 
+  border: 4px solid navy
+}
+table.inner{
+  border: 0px
+}
+</style>
+
+<title>Innovation/Idea Registration</title>
+    <!-- auto-generated on export -->
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script type="text/javascript" src="scripts/RbsScript.js"></script>       
+</head>
+
+
+<body background=https://cdn.pixabay.com/photo/2016/12/01/13/14/lightbulbs-1875257_1280.jpg>
+
+<h3>INNOVATION/IDEA REGISTRATION PORTAL</h3>
+
+<h4> The history of innovation is the story of ideas that seemed dumb at the time</h4>
+
+<table align="center" cellpadding = "10" style="width:38%;">
+    
+<div>
+<tr><div id="email"> <td>Email:</td> <td><input id="txtEmail" type="text" maxlength="100" onchange="getUserDetails()" /> </td></div></tr>
+<tr><div id="name"> <td>Name:</td> <td><input id="txtName" type="text" />(max 30 characters a-z and A-Z) </td></div></tr>
+<tr><div id="location"> <td>Location:</td> <td><select id="drpdwnLocation" onchange="populateSubLocation()" maxlength="100"></select> </td></div></tr>
+<tr><div id="sublocation"> <td>Sub-Location:</td> <td><select id="drpdwnSubLocation"></select></td> </div></tr>
+<tr><div id="businessgroup"> <td>Business Group:</td><td> <select id="drpdwnBusinessGroup"  onchange="populateBusinessUnit()"></select> </td></div></tr>
+<tr><div id="businessunit"> <td>Business Unit:</td><td> <select id="drpdwnBusinessUnit"></select> </td></div></tr>
+<tr>
+<table align="center" cellpadding = "10" id="adminPanel" style="display:none;width:38%;">
+<tr><td><div id="password"> <td>Password:</td> <td><input id="txtPass" type="password" /> </td></div></td></tr>
+<tr><td colspan="2" align="center"><button id="btnAdminSubmit" Value="Submit" onclick="AdminSubmit()" />Submit</button></td></tr>
+<tr><td><a id="reportDash" style="display:none;" href="https://us-east-1.quicksight.aws.amazon.com/sn/start/dashboards">Report Dashboard</a></td></tr>
+<tr><td><div id="wrongPassLabel" style="display:none;">Your password is incorrect. Please verify. </div></td></tr>
+</table>
+</tr>
+
+<tr>
+<table align="center" cellpadding = "10" id="innovationFields" style="display:none;width:38%">
+
+<tr><div id="title"> <td>Title:</td> <td><input id="txtTitle" type="text" /> </td></div></tr>
+<tr><div id="benefit"> <td>Benefit:</td> <td><select id="drpdwnBenefit"></select> </td></div></tr>
+<tr><div id="category"> <td>Category:</td> <td><select id="drpdwnCategory"></select> </td></div></tr>
+<tr><div id="technology"> <td>Technology:</td> <td><select id="drpdwnTechnology"></select> </td></div></tr>
+<tr><div id="estimatedcost"> <td>Estimated Cost (in GBP):</td> <td><input id="txtEstimatedcost" type="text" /> </td></div></tr>
+<tr><div id="timetomarket"> <td>Time to Market (in days):</td> <td><input id="txtTimetomarket" type="text" /> </td></div></tr>
+<tr><div id="description1"> <td>Innovation Idea:<br /><br /><br /></td> <td><textarea id="txtareaDescription" rows="3" cols="30"></textarea></td> </div></tr>
+<tr><td colspan="2" align="center"><button id="btnReset" Value="Reset" onclick="Reset()" />Reset</button>
+<button id="btnSubmit" Value="Submit" onclick="Submit()" />Submit</button></td></tr>
+<br/>
+<tr><td><div id="submitionLabel" style="display:none;font-size:large;">Thank you for submission! Your entry has been recorded. </div></td></tr>
+
+</table>
+</tr>
+
+</td>
+</tr>
+</div>
+</table>
+    
+<script type="text/javascript">	
+	populateLocation();
+	populateBusinessGroup();	
+	populateBenefit();
+	populateCategory();
+	populateTechnology();
+</script>
+</form>
+</body>
+
+
+</html>
+<!-- random-length HTML comment: L2QpO0FNuxMdzDXRHwczVtEiwjPNhNDtDRWRHbe1NqTCroRwatjuaoQLLdYtqZatow8uLalYE2Ythpe5WDpvp561ZUiDs8vWsrG3IqQKgm4DQY7mZmXFgT63mc4SapoGXt7dXLn3yf5E12oRcAW6TQz3ssLGVyKqhHJ4TvxHQqJIixXBxt7F7v6nbIrw61db8mVRVGWmvdsTRFSCwOFr7CUYKBKE0nfyOyEj2YJn2z5H4NJoZNVWPnuXo3bee4RssTQirXMjNHqFSyssBDEQrxlTqCwI6BzmUFKBaUjlbPpuBXaCYcQDP1V31HCxI1Xa4gbS0A4SOhAP4aQQ2gUGWp7Nu790yWQq2p7toz90W7FOVTeNywRKZPXHMW79rLnhziOdXNTrIW5dqYpcI6miJ7pWSlT9w6ejftC04TiDobgSxJu6GWcPTFjlo2iZxD8SuBGmSop6EKO1T8xXSNnkRML5DsU0tTGdSMFkztf31tuKqgg6tHgATq4UYOKHhQizbnYQW3JLk1UOX0LF7rDOV7jtMtyr8WfZ83nSuweUnyj9ouEjZHxvFWcPER6AlbZjSC2CwWXXI4UwmYTBeGuhbNudcqdDG0lY0dbmxw75oSpQo8PGC8lbJV4lCVmILLeBo3lZphSRx7hb3vg4tHV2dObdjBjtNDuz7UNk -->
